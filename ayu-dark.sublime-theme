@@ -565,10 +565,10 @@
   {
     "class": "sidebar_tree",
     "indent_top_level": false,
-    "row_padding": [20, 6],
+    "row_padding": [8, 3],
     "dark_content": false,
     "spacer_rows": true,
-    "indent_offset": 2,
+    "indent_offset": 15,
     "indent": 10
   },
 
@@ -593,7 +593,7 @@
     "class": "tree_row",
     "layer0.texture": "ayu/assets/tree-highlight.png",
     "layer0.tint": [10, 13, 16],
-    "layer0.inner_margin": [8, 4, 8, 4],
+    "layer0.inner_margin": [4, 4],
     "layer0.opacity": 0
   },
 
@@ -800,11 +800,31 @@
     "layer0.tint": [242, 151, 24]
   },
 
-  // Hidden arrow icon before folder
+  // Arrow icon before folder
 
   {
     "class": "disclosure_button_control",
-    "content_margin": [0, 0, 0, 0]
+    "content_margin": [8, 8],
+
+    "layer0.texture": "ayu/assets/group-closed.png",
+    "layer0.tint": [46, 54, 60],
+    "layer0.opacity": 1.0,
+    "layer0.inner_margin": 0,
+  },
+  {
+    "class": "disclosure_button_control",
+    "attributes": ["expanded"],
+    "layer0.texture": "ayu/assets/group-open.png",
+  },
+  {
+    "class": "disclosure_button_control",
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "layer0.tint": [242, 151, 24]
+  },
+  {
+    "class": "disclosure_button_control",
+    "parents": [{ "class": "tree_row", "attributes": ["selected"] }],
+    "layer0.tint": [242, 151, 24]
   },
 
   // Opened files
